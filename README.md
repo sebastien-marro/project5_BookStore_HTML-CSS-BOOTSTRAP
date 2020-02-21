@@ -1,4 +1,4 @@
-**BOOK STORE : A website using only HTML and CSS**
+**BOOK STORE : An extract of a real and beautiful website using only HTML, CSS, BOOSTRAP and LIGHTBOX.CSS. And a light touch of JQUERY.**
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
