@@ -1,0 +1,357 @@
+/* GLOBAL */
+
+.titleCategories::first-letter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    font-style: normal;
+    margin-right: 10px;
+}
+
+.titleCategories {
+    display: inline-block;
+    font-size: 48px;
+    text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+    transition: all 0.70s;
+}
+
+.titleCategories:hover {
+    transform: translate(-5px, -3px);
+    text-shadow: 2px 2px 20px rgba(150, 150, 150, 1);
+}
+
+
+/* NAVIGATION */
+
+.hambergerMenu {
+    width: 65px;
+    height: 65px;
+    background-color: #858181;
+    position: fixed;
+    z-index: 200;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    outline: none!important;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 30px;
+    height: 2px;
+    background-color: #eee;
+    margin: 5px;
+    transition: all 0.6s;
+}
+
+.bgCover {
+    width: 65px;
+    height: 65px;
+    background: rgba(35, 37, 40, 0.98);
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100;
+    border-radius: 50%;
+    outline: none!important;
+    transition: all 0.6s;
+}
+
+
+/* START JQUERY */
+
+.change .line1 {
+    transform: rotate(-405deg) translate(-5px, 5px);
+    background-color: #343a40;
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(405deg) translate(-5px, -5px);
+    background-color: #343a40;
+}
+
+.change .hambergerMenu {
+    background-color: #e95a57;
+    transition: all 2s;
+}
+
+.change .bgCover {
+    transform: scale(150);
+}
+
+
+/* END JQUERY */
+
+.navContent {
+    /* position: fixed; */
+    z-index: 150;
+}
+
+.linkItem {
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: #eee;
+    border-bottom: 2px solid #eee;
+}
+
+.linkItem:hover {
+    color: #eee;
+    border-radius: 50% 50% 0 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* HEADER */
+
+#mainHeader {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(20, 0, 0, 0.6)), url("../img/header-bg.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.titleHeader::first-letter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 160px;
+    margin-right: 20px;
+}
+
+.titleHeader img {
+    animation: beating 2s infinite;
+}
+
+@keyframes beating {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* GALLERY */
+
+#mainGallery .image {
+    backface-visibility: hidden;
+    transition: all 0.60s;
+}
+
+#mainGallery .image:hover {
+    transform: scale(1.05);
+}
+
+
+/* WRITTERS */
+
+#mainWriters {
+    background: linear-gradient(rgba(250, 250, 250, 0.2), rgba(250, 250, 250, 0.4)), url("../img/writers-bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* SUGGESTED BOOKS */
+
+#mainSuggestedBooks {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../img/wood-bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.books {
+    position: relative;
+    height: 50vh;
+}
+
+.book {
+    width: 40%;
+    position: absolute;
+    box-shadow: 5px 5px 15px #444;
+    border-right: 5px solid #777;
+    border-bottom: 10px solid #444;
+    transition: all 0.80s ease-in-out;
+}
+
+.book-1 {
+    top: 20%;
+    left: 30%;
+    transform: rotate(-45deg);
+}
+
+.book-2 {
+    top: 20%;
+    left: 50%;
+    transform: rotate(30deg);
+}
+
+.book-3 {
+    left: 40%;
+    top: 60%;
+    transform: rotate(60deg);
+}
+
+.book-4 {
+    top: 55%;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.book:hover {
+    transform: scale(1.3) rotateX(20deg);
+    z-index: 50;
+    box-shadow: 5px 5px 25px #444;
+    border-right: 10px solid #dddddd;
+    border-bottom: 20px solid #bbbbbb;
+}
+
+
+/* POPULAR BOOKS */
+
+#popularBooks {
+    background-color: #BABABA;
+}
+
+.bookCard {
+    position: relative;
+    box-shadow: 5px 15px 50px #aaaaaa;
+    max-width: 420px;
+    transition: all 0.8s;
+    overflow: hidden;
+}
+
+.rotate {
+    perspective: 1000px;
+}
+
+.back {
+    position: absolute;
+    background-color: #fefefe;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: all 0.8s, opacity 0.4s;
+}
+
+.backContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate:hover .bookCard {
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back {
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+
+
+/* CONTACT */
+
+#mainContact {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../img/header-bg.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.itemsWrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../img/items-wrapper-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.floatingItem {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+}
+
+.firstItem {
+    animation: float 10s linear infinite;
+}
+
+.secondItem {
+    animation: float 15s linear infinite;
+}
+
+.thirdtItem {
+    animation: float 15s linear infinite;
+}
+
+.fourthtItem {
+    animation: float 10s linear infinite;
+}
+
+.fifthItem {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    0% {
+        transform: translateX(0);
+    }
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    background-color: transparent;
+    color: #777;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.contactForm textarea:focus,
+.contactForm input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+}
+
+
+/* FOOTER */
+
+#mainFooter {
+    background-color: #343a40;
+}
+
+.contactFooter input[type="email"] {
+    box-shadow: none;
+}
